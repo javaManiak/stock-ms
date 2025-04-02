@@ -1,14 +1,14 @@
 pipeline {
     agent any
     environment {
-        DOCKER_IMAGE = "neeraj06092024/stockms"
+        DOCKER_IMAGE = "bennma2000/stockms"
         KUBE_CONFIG = "/home/ubuntu/.kube/config"
 
     }
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/javaManiak/delivery-ms.git'
+                git branch: 'main', url: 'https://github.com/javaManiak/stock-ms.git'
             }
         }
         stage('Build & Test') {
